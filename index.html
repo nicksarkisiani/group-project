@@ -6,11 +6,14 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
     <title>Document</title>
 </head>
 <body>
     <div class="mainConteiner">
-        <header class=" header justify-content  " >
+        <header class=" header  justify-between" >
             <img src="./assets/img/logo.svg" alt="" class="logo">
             <nav class="navigation justify-content  align-items ">
                 <ul class="justify-content">
@@ -34,17 +37,71 @@
         </header>
 
         <main>
-            <section class="developer-section justify-content align-items   "> 
-            <div>
-                <img src="./assets/img/section -main.png" alt="">
 
-            </div>
+            <section class="developer-section justify-content align-items   "> 
+
+                <div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide justify-content  " style="display: flex; align-items: center; gap: 250px; ">
+        
+
+              <div> <img  src="./assets/img/main-slider-photo3.png" alt="" > </div>  
+
+            
             <div class="developer-section-text">
                 <h1>გახდი დეველოპერი!</h1>
                 <h3> შეისწავლე <span> Front-End დეველოპმენტი !</span></h3>
-                <button>სრულად ნახვა</button>
+                <button style="width: 180px; height: 50px;">სრულად ნახვა</button>
+            </div>
+    </div>
 
-            </div>    
+
+<div class="swiper-slide justify-content  " style="display: flex; align-items: center; gap: 250px;">
+        
+
+              <div> <img src="./assets/img/main-slider-photo2.png" alt=""> </div>  
+
+            
+            <div class="developer-section-text">
+                <h1>გახდი დეველოპერი!</h1>
+                <h3> შეისწავლე <span> Front-End დეველოპმენტი !</span></h3>
+                <button style="width: 180px; height: 50px;">სრულად ნახვა</button>
+            </div>
+    </div>
+
+    <div class="swiper-slide justify-content  " style="display: flex; align-items: center; gap: 250px;">
+        
+
+              <div> <img src="./assets/img/main-slider-photo1.png" alt=""> </div>  
+
+            
+            <div class="developer-section-text">
+                <h1>გახდი დეველოპერი!</h1>
+                <h3> შეისწავლე <span> Front-End დეველოპმენტი !</span></h3>
+                <button style="width: 180px; height: 50px;">სრულად ნახვა</button>
+            </div>
+    </div>
+
+    
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+
+</div>
+
+
+
+
+
+         
             
             </section>
 
@@ -318,6 +375,10 @@
         </main>
 
     </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./main.js"> </script>
     
 </body>
 </html>
