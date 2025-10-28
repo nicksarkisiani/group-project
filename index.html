@@ -28,7 +28,7 @@
                     <i class="fa-solid fa-basket-shopping"></i>
 
                 </div>
-                <button>
+                <button class="log-in">
                     შესვლა
                 </button>
 
@@ -357,7 +357,7 @@
 
 
 
-             <section class="libriris justify-content  align-items ">
+             <section class="libriris justify-content  align-items align-text">
 
                   <div class="libriris-img">
                     <img src="./assets/img/libriris-photo.png" alt="">
@@ -372,6 +372,193 @@
 
               
             </section>
+
+            <section class="authorization container justify-between align-items">
+                <div class="left-side justify-content direction-column">
+                    <button class="back-button" onclick="goBack()">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <div class="content direction-column space-evenly justify-content align-items">
+                            <h1>ავტორიზაცია</h1>
+                            <p class="description"> შენს ანგარიშზე შესასვლელად, გაიარე ავტორიზაცია</p>
+                            <form id="authForm direction-column " onsubmit="handleSubmit(event)">
+                                <div class="form-group">
+                                    <input 
+                                        type="text" 
+                                        id="emailOrPhone" 
+                                        name="emailOrPhone" 
+                                        placeholder="მომხმარებლის ელ. ფოსტა ან ტელ. ნომერი"
+                                        required
+                                    >
+                                </div>
+                                <div></div>
+
+                                <div class="form-group">
+                                    <div class="password-wrapper">
+                                        <input 
+                                            type="password" 
+                                            id="password" 
+                                            name="password" 
+                                            placeholder="პაროლი"
+                                            required
+                                        >
+                                        <button type="button" class="toggle-password" onclick="togglePassword()">
+                                            <i class="fa-solid fa-eye"></i>
+                                            <i class="fa-regular fa-eye-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-options">
+                                    <label class="remember-me">
+                                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                                        <span>დამახსოვრება</span>
+                                    </label>
+                                    <a href="#" class="forgot-password">დაგავიწყდა პაროლი?</a>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">ავტორიზაცია</button>
+                            </form>
+
+                            <div class="divider">ან შედი ანგარიშზე</div>
+
+                            <button class="btn btn-google " onclick="signInWithGoogle()">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M19.8 10.2273C19.8 9.51818 19.7364 8.83636 19.6182 8.18182H10.2V12.05H15.6109C15.3727 13.3 14.6455 14.3591 13.5636 15.0682V17.5773H16.8273C18.7091 15.8364 19.8 13.2727 19.8 10.2273Z" fill="#4285F4"/>
+                                    <path d="M10.2 20C12.9 20 15.1636 19.1045 16.8273 17.5773L13.5636 15.0682C12.6545 15.6682 11.5091 16.0227 10.2 16.0227C7.59545 16.0227 5.38636 14.2636 4.58636 11.9H1.20909V14.4909C2.86364 17.7591 6.29545 20 10.2 20Z" fill="#34A853"/>
+                                    <path d="M4.58636 11.9C4.38636 11.3 4.27273 10.6591 4.27273 10C4.27273 9.34091 4.38636 8.7 4.58636 8.1V5.50909H1.20909C0.527273 6.85909 0.136364 8.38636 0.136364 10C0.136364 11.6136 0.527273 13.1409 1.20909 14.4909L4.58636 11.9Z" fill="#FBBC05"/>
+                                    <path d="M10.2 3.97727C11.6318 3.97727 12.9045 4.48182 13.9045 5.43636L16.8182 2.52273C15.1591 0.977273 12.8955 0 10.2 0C6.29545 0 2.86364 2.24091 1.20909 5.50909L4.58636 8.1C5.38636 5.73636 7.59545 3.97727 10.2 3.97727Z" fill="#EA4335"/>
+                                </svg>
+                                Google-ით გაგრძელება
+                            </button>
+
+                            <div class="register-link">
+                                არ გაქვს ანგარიში? <a href="#">გაიარე რეგისტრაცია</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="right-side direction-column">
+                    <img src="./assets/img/authorization/auth-1.png">
+                </div>
+            </section>
+            <section class="registration container justify-between align-items">
+                    <div class="left-side">
+                        <button class="back-button" onclick="goBack()">
+                           <i class="fa-solid fa-angle-left"></i>
+                        </button>
+
+                        <div class="content direction-column space-evenly justify-content align-items">
+                            <h1>რეგისტრაცია</h1>
+                            <p class="description"> ახალი ანგარიშის შესაქმნელად, გაიარე რეგისტრაცია</p>
+                            <form id="authForm direction-column " onsubmit="handleSubmit(event)">
+
+                            <form id="registerForm" onsubmit="handleSubmit(event)">
+                                <div class="form-names direction-Row">
+                                    <div class="form-group-names">
+                                        <input 
+                                            type="text" 
+                                            id="firstName" 
+                                            name="firstName" 
+                                            placeholder="სახელი"
+                                            required
+                                        >
+                                    </div>
+
+                                    <div class="form-group-names">
+                                        <input 
+                                            type="text" 
+                                            id="lastName" 
+                                            name="lastName" 
+                                            placeholder="გვარი"
+                                            required
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        placeholder="ელ. ფოსტა"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="form-group">
+                                    <input 
+                                        type="tel" 
+                                        id="phoneNumber" 
+                                        name="phoneNumber" 
+                                        placeholder="ტელ. ნომერი"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="password-wrapper">
+                                        <input 
+                                            type="password" 
+                                            id="password" 
+                                            name="password" 
+                                            placeholder="პაროლი"
+                                            required
+                                        >
+                                        <button type="button" class="toggle-password" onclick="togglePassword('password')">
+                                            <i class="fa-solid fa-eye"></i>
+                                            <i class="fa-regular fa-eye-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="password-wrapper">
+                                        <input 
+                                            type="password" 
+                                            id="confirmPassword" 
+                                            name="confirmPassword" 
+                                            placeholder="გაიმეორე პაროლი"
+                                            required
+                                        >
+                                        <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">
+                                            <i class="fa-solid fa-eye"></i>
+                                            <i class="fa-regular fa-eye-slash"></i>
+                                        </button>
+                                    </div>
+                                    <div id="passwordError" class="error-message"></div>
+                                </div>
+
+                                <label class="policy-agreement">
+                                    <input type="checkbox" id="agreePolicy" name="agreePolicy" required>
+                                    <span>ღილაკზე დაჭერით თქვენ ეთანხმებით skillUp-ის <a href="#">პოლიტიკას</a></span>
+                                </label>
+
+                                <button type="submit" class="btn btn-primary">დარეგისტრირდი</button>
+                            </form>
+
+                            <div class="divider">ან გააგრძელე როგორც</div>
+
+                            <button class="btn btn-google" onclick="signUpWithGoogle()">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M19.8 10.2273C19.8 9.51818 19.7364 8.83636 19.6182 8.18182H10.2V12.05H15.6109C15.3727 13.3 14.6455 14.3591 13.5636 15.0682V17.5773H16.8273C18.7091 15.8364 19.8 13.2727 19.8 10.2273Z" fill="#4285F4"/>
+                                    <path d="M10.2 20C12.9 20 15.1636 19.1045 16.8273 17.5773L13.5636 15.0682C12.6545 15.6682 11.5091 16.0227 10.2 16.0227C7.59545 16.0227 5.38636 14.2636 4.58636 11.9H1.20909V14.4909C2.86364 17.7591 6.29545 20 10.2 20Z" fill="#34A853"/>
+                                    <path d="M4.58636 11.9C4.38636 11.3 4.27273 10.6591 4.27273 10C4.27273 9.34091 4.38636 8.7 4.58636 8.1V5.50909H1.20909C0.527273 6.85909 0.136364 8.38636 0.136364 10C0.136364 11.6136 0.527273 13.1409 1.20909 14.4909L4.58636 11.9Z" fill="#FBBC05"/>
+                                    <path d="M10.2 3.97727C11.6318 3.97727 12.9045 4.48182 13.9045 5.43636L16.8182 2.52273C15.1591 0.977273 12.8955 0 10.2 0C6.29545 0 2.86364 2.24091 1.20909 5.50909L4.58636 8.1C5.38636 5.73636 7.59545 3.97727 10.2 3.97727Z" fill="#EA4335"/>
+                                </svg>
+                                Google-ით გაგრძელება
+                            </button>
+
+                            <div class="login-link">
+                                უკვე გაქვს ანგარიში? გაიარე <a href="#"> ავტორიზაცია</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-side">
+                        <div><img src="../group-project/assets/img/authorization/Rectangle 2818.png"></div>
+                    </div>
+                </div>
+            <section>
         </main>
 
     </div>
