@@ -46,11 +46,11 @@
 
 .header{
   
-    width: 1152px;
+    max-width: 1152px;
     font-size: 16px;
     font-weight:500;
     color: rgb(32, 23, 23);
-    gap: 242px;
+   
     margin: 0 auto;
 }
 
@@ -111,7 +111,7 @@ border-radius: 25px;
 
 .course-about-title{
     margin-top: 100px;
-    gap: 235px;
+    gap: 335px;
 
 
 }
